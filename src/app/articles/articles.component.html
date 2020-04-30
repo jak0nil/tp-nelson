@@ -1,0 +1,8 @@
+<div *ngFor="let article of this.articles()">
+  <app-article [article]="article"></app-article>
+  <button (click)="delete(article)">delete</button>
+</div>
+
+<app-article-creation [creationCallback]="createArticle">
+
+</app-article-creation>
