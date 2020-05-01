@@ -43,3 +43,10 @@ ng update @angular/core@8 @angular/cli@8
 ng update @angular/core @angular/cli
 npm install
 ```
+
+## Utilité de la migration
+La migration est intéressante car:
+
+- Elle permet de bénéficier des dernières fonctionnalités qu'offre Angular
+- Elle permet de bénéficier d'éventuel Bug Fixes des version précédantes
+- Elle permet de rester sur une version pas trop vieille et donc maintenue
