@@ -9,6 +9,7 @@ import {ArticleService} from './article.service';
 import {HttpClientModule} from '@angular/common/http';
 import { ArticleCreationComponent } from './article-creation/article-creation.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ArticleSearchComponent } from './article-search/article-search.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     ArticleComponent,
     ArticlesComponent,
-    ArticleCreationComponent
+    ArticleCreationComponent,
+    ArticleSearchComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+<h3><i>Search an article</i></h3>
+<form [formGroup]="articleForm" (ngSubmit)="searchArticle()">
+  <div class="form-group">
+    <br />
+    <label class="center-block">title:
+      <input class="form-control" formControlName="title" (ngModelChange)="searchArticle()">
+    </label>
+    <br />
+    <label class="center-block">content:
+      <textarea class="form-control" formControlName="content" (ngModelChange)="searchArticle()"></textarea>
+    </label>
+    <br />
+    <label class="center-block">authors:
+      <input class="form-control" formControlName="authors" (ngModelChange)="searchArticle()">
+    </label>
+    <br />
+  </div>
+  <button class="btn" (click)="resetSearch()">Reset</button>
+</form>

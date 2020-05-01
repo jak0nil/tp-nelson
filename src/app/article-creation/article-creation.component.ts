@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import {ArticleService} from '../article.service';
-import {Article, ArticleCreationCallBack} from '../models/article';
+import {Article, ArticleCallback} from '../models/article';
 
 @Component({
   selector: 'app-article-creation',
@@ -21,7 +21,7 @@ export class ArticleCreationComponent implements OnInit {
   }
 
   @Input()
-  creationCallback: ArticleCreationCallBack;
+  creationCallback: ArticleCallback;
 
 
   ngOnInit() {}

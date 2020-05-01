@@ -1,6 +1,14 @@
+<app-article-search [searchCallback]="searchArticle">
+
+</app-article-search>
+
 <div *ngFor="let article of this.articles()">
   <app-article [article]="article"></app-article>
   <button (click)="delete(article)">delete</button>
+</div>
+
+<div *ngIf="this.nbArticles() === 0">
+  <h2>No Articles were found</h2>
 </div>
 
 <app-article-creation [creationCallback]="createArticle">

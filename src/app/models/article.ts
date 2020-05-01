@@ -7,6 +7,5 @@ export type ArticleWithId = Article & {
   id: number
 }
 
-
-export type ArticleCreationCallBack = (article: Article) => void;
-export type ArticleWithIdCreationCallBack = (article: ArticleWithId) => void;
+export type VoidCallback = () => void;
+export type ArticleCallback = (article: Article) => void;
