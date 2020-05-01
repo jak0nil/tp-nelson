@@ -1,27 +1,35 @@
-# SimpleApp
+# Application web d'articles
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
+Pour lancer cette application lancer la commande suivante dans un terminal
+
+```shell script
+json-server server.json
+```
+
+Puis dans un autre, lancez (éventuellement)
+```shell script
+npm install
+```
+Et enfin
+```shell script
+npm start
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Migration Angular 5 -> 8
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Voici les commandes que j'ai lancées pour migrer ce projet d'Angular 5 à Angular 8
 
-## Build
+```shell script
+update @angular/cli@6
+ng update @angular/core@6
+npm install -g rxjs-tslint
+rxjs-5-to-6-migrate -p src/tsconfig.app.json
+ng update @angular/cli@7 @angular/core@7
+ng update @angular/cli --migrate-only --from=1.7.0 # cette commande a permis de générer le fichier angular.json
+ng update @angular/cli@8 @angular/core@8
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
