@@ -1,7 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Article, ArticleWithId} from '../models/article';
-import {ActivatedRoute} from '@angular/router';
-import {ArticleService} from '../article.service';
 
 @Component({
   selector: 'app-article',
@@ -11,7 +9,7 @@ import {ArticleService} from '../article.service';
 export class ArticleComponent implements OnInit {
 
   @Input()
-  article: Article;
+  article: ArticleWithId;
 
   constructor() {
 
